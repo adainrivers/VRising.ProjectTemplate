@@ -1,0 +1,147 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>VRising.ProjectTemplate</AssemblyName>
+    <Description>My first plugin</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RestoreSources>
+      https://api.nuget.org/v3/index.json;
+      https://nuget.bepinex.dev/v3/index.json;
+    </RestoreSources>
+    <VRisingPath>D:\SteamLibrary\steamapps\common\VRising\VRising_Server</VRisingPath>
+    <UnhollowedDllPath>$(VRisingPath)\BepInEx\unhollowed</UnhollowedDllPath>
+    <PluginsPath>$(VRisingPath)\BepInEx\plugins</PluginsPath>
+  </PropertyGroup>
+
+  <Target Name="CopyDLLs" AfterTargets="Build">
+    <Message Text="Copying output files to plugins folder." Importance="High" />
+    <Copy SourceFiles="$(TargetDir)$(ProjectName).dll;$(TargetDir)$(ProjectName).pdb" DestinationFolder="$(PluginsPath)" />
+    <Message Text="Copied." Importance="High" />
+  </Target>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.IL2CPP" Version="6.0.0-*" IncludeAssets="compile" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
+    <PackageReference Include="Costura.Fody" Version="5.7.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Wetstone" Version="1.1.0" />
+  </ItemGroup>
+
+   <ItemGroup>
+    <Reference Include="Il2CppSystem">
+      <HintPath>$(UnhollowedDllPath)\Il2CppSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Core">
+      <HintPath>$(UnhollowedDllPath)\Il2CppSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Numerics">
+      <HintPath>$(UnhollowedDllPath)\Il2CppSystem.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectM.Behaviours">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.Behaviours.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectM.Camera">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.Camera.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectM.CastleBuilding.Systems">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.CastleBuilding.Systems.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectM.Conversion">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.Conversion.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectM.Gameplay.Scripting">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.Gameplay.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectM.Gameplay.Systems">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.Gameplay.Systems.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectM.GeneratedNetCode">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.GeneratedNetCode.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectM.Misc.Systems">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.Misc.Systems.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectM.Pathfinding">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.Pathfinding.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectM.Presentation.Systems">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.Presentation.Systems.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectM.Roofs">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.Roofs.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectM.Shared">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.Shared.dll</HintPath>
+    </Reference>
+
+    <Reference Include="IL2Cppmscorlib">
+      <HintPath>$(UnhollowedDllPath)\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+
+    <Reference Include="ProjectM">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.dll</HintPath>
+    </Reference>
+
+    <Reference Include="com.stunlock.network">
+      <HintPath>$(UnhollowedDllPath)\com.stunlock.network.dll</HintPath>
+    </Reference>
+
+    <Reference Include="ProjectM.Terrain">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.Terrain.dll</HintPath>
+    </Reference>
+
+    <Reference Include="Sequencer">
+      <HintPath>$(UnhollowedDllPath)\Sequencer.dll</HintPath>
+    </Reference>
+
+    <Reference Include="Unity.Collections">
+      <HintPath>$(UnhollowedDllPath)\Unity.Collections.dll</HintPath>
+    </Reference>
+
+    <Reference Include="Unity.Entities">
+      <HintPath>$(UnhollowedDllPath)\Unity.Entities.dll</HintPath>
+    </Reference>
+
+    <Reference Include="ProjectM.HUD">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.HUD.dll</HintPath>
+    </Reference>
+
+    <Reference Include="Unity.Mathematics">
+      <HintPath>$(UnhollowedDllPath)\Unity.Mathematics.dll</HintPath>
+    </Reference>
+
+    <Reference Include="Unity.Physics">
+      <HintPath>$(UnhollowedDllPath)\Unity.Physics.dll</HintPath>
+    </Reference>
+
+    <Reference Include="Unity.Scenes">
+      <HintPath>$(UnhollowedDllPath)\Unity.Scenes.dll</HintPath>
+    </Reference>
+
+    <Reference Include="Unity.Transforms">
+      <HintPath>$(UnhollowedDllPath)\Unity.Transforms.dll</HintPath>
+    </Reference>
+
+    <Reference Include="UnityEngine">
+      <HintPath>$(UnhollowedDllPath)\UnityEngine.dll</HintPath>
+    </Reference>
+
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(UnhollowedDllPath)\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+
+    <Reference Include="ProjectM.CodeGeneration">
+      <HintPath>$(UnhollowedDllPath)\ProjectM.CodeGeneration.dll</HintPath>
+    </Reference>
+
+
+    <Reference Include="Stunlock.Core">
+      <HintPath>$(UnhollowedDllPath)\Stunlock.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
