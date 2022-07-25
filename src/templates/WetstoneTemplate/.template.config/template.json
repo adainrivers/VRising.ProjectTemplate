@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Adain Rivers",
+  "classifications": [ "Class Library", "VRising" ],
+  "name": "V Rising Mod Project Template",
+  "identity": "VRising.ProjectTemplate",
+  "groupIdentity": "VRising.ProjectTemplate",
+  "shortName": "vrisingmod",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "VRising.TestPlugin",
+  "preferNameDirectory": true,
+  "symbols": {
+    "gamefolder": {
+      "type": "parameter",
+      "defaultValue": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\VRising",
+      "replaces": "D:\\SteamLibrary\\steamapps\\common\\VRising\\VRising_Server"
+    }
+  }
+}

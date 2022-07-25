@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WetstoneTemplate", "templates\WetstoneTemplate\WetstoneTemplate.csproj", "{C121CD91-0F98-408E-8A52-A638E5D9C1E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VRising.TemplatePack", "VRising.TemplatePack.csproj", "{E00C9C20-9F68-40FD-A6CC-C7FE8C3DCBDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C121CD91-0F98-408E-8A52-A638E5D9C1E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C121CD91-0F98-408E-8A52-A638E5D9C1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C121CD91-0F98-408E-8A52-A638E5D9C1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C121CD91-0F98-408E-8A52-A638E5D9C1E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E00C9C20-9F68-40FD-A6CC-C7FE8C3DCBDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E00C9C20-9F68-40FD-A6CC-C7FE8C3DCBDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E00C9C20-9F68-40FD-A6CC-C7FE8C3DCBDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E00C9C20-9F68-40FD-A6CC-C7FE8C3DCBDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1919F394-EC45-4CAD-9384-32742DAA1D9B}
+	EndGlobalSection
+EndGlobal
